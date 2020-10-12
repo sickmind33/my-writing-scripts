@@ -1,7 +1,6 @@
-#Reed's Prompt Generator v1.1
+#Reed's Prompt Generator v1.1.1
 #Changelog
-#Updated character generator with code from new character generator for more detailed characters
-#scene() has been given more story possibilities 
+#0 feet 0 inches bug fixed
 import random
 import time
 
@@ -57,7 +56,10 @@ def char(actor):#generates the character. Will run twice in exe() to give two ch
         species = creatures[random.randint(0,19)]
         sag = gender[random.randint(0,1)]
         feet = random.randint(0,8)
-        inches = random.randint(0,11)
+        if feet == 0:
+            inches = random.randint(1,11)
+        else:
+            inches = random.randint(0,11)
         attitude = emotions[random.randint(0,10)]
         if dirty == "yes":
             if sag == "female":
@@ -105,12 +107,12 @@ def main():#runs exe() in a loop. Export prompts to a file
     choice = str()
     while choice != "no":
         exe()
-        choice = input("\nIf you wish to keep this prompt, exit python or turn off the script\nType no to quit and reset the text file\nOtherwise, press enter to create a new prompt\n")
+        choice = input("\nIf you wish to keep this prompt, type keep\nType no to quit the program and reset the text file\nOtherwise, press enter to create a new prompt\n")
         if choice == "no":
             file = open("prompt.txt","w")
             file.write("")
             file.close
-            break
+            break               
         else:
             print("Generating a new prompt")
             time.sleep(2)
