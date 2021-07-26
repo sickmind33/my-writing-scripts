@@ -1,0 +1,13 @@
+import os
+import random
+dir = r"folderpath goes here. ex: C:\User\Derp\desktop\refs"
+
+files = ( next( os.walk(dir) )[2] )
+
+testfile = files[random.randint(0,12)]
+
+pane = dir + "\\"
+
+pane = pane + testfile
+
+os.startfile(pane)
