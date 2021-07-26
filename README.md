@@ -14,3 +14,6 @@ Creates a writing prompt with a location, two characters, and a conflict.  Creat
 
 **Word Count Cost**  
 My pride and joy. This script will take a story you are writing, count the words in the story, calculate the cost per word, and output the cost to a text file. Great for writers who livestream and want the cost seen live.
+
+**Random File Opener**
+A script that will randomly open any file in a specific folder. Made for the purpose of pictures, but will work for other filetypes.
