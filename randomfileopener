@@ -1,6 +1,6 @@
 import os
 import random
-dir = r"C:\Users\Owner\Pictures\porn\PokemonSnapXXXL"
+dir = r"Filepath goes here"
 
 thenumber = int(input("How many files are in the folder? "))
 
